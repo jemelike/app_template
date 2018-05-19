@@ -1,0 +1,22 @@
+{
+  "name": "app_template",
+  "version": "1.0.0",
+  "description": "template for app creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jemelike/app_template.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Joseph Emelike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jemelike/app_template/issues"
+  },
+  "homepage": "https://github.com/jemelike/app_template#readme"
+}
