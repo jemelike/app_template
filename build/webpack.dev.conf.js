@@ -55,7 +55,7 @@ module.exports = merge(baseWebpackConfig, {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
-    }),/*
+    }),
 new HtmlWebpackPlugin({
         filename: './static/staffer.html',
         template: 'staffer.html',
@@ -69,8 +69,8 @@ new HtmlWebpackPlugin({
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
-    }),*/
-    new FaviconsWebpackPlugin('./src/assets/img/logo.png'),
+    }),
+   /* new FaviconsWebpackPlugin('./src/assets/img/logo.png')*/,
     new FriendlyErrorsPlugin(),
       // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
@@ -90,10 +90,10 @@ new HtmlWebpackPlugin({
     }),
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
-    new webpack.optimize.CommonsChunkPlugin({
+   /* new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
-    }),
+    }),*/
     // copy custom static assets
     new CopyWebpackPlugin([
       {

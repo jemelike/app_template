@@ -28,7 +28,6 @@ const autoOpenBrowser = !!config.dev.autoOpenBrowser
 const proxyTable = config.dev.proxyTable
 
 const app = express()
-
 const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
@@ -76,9 +75,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(cors())
-//Load Model
-let User = require('../src/models/Users')
-let Message = require('../src/models/Message')
 // serve pure static assets
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
@@ -109,8 +105,10 @@ const io = require('socket.io')(server)
 
 //setup db connection
 const db = require('../config/db/db.base.conf')
+console.log('> Starting dev server...')
+devMiddleware.waitUntilValid(() => {
   console.log('> Listening at ' + uri + '\n')
-  console
+  //console
   // when env is testing, don't need open it
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     //    opn(uri)
